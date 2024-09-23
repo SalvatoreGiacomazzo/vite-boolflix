@@ -1,10 +1,29 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import Main from './components/Main.vue'
+import InputSearch from './components/InputSearch.vue'
+
+export default {
+  components:{
+    Main,
+    InputSearch
+  }, 
+  data() {
+        return {
+
+        }
+    }
+}
+
+
+
+
+
+
 </script>
 
 <template>
+<InputSearch />
 
-  <HelloWorld  />
 </template>
 
 <style lang ="scss" scoped>
