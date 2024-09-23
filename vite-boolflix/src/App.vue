@@ -24,6 +24,11 @@ export default {
 <template>
 <InputSearch />
 
+<Main />
+
+
+
+
 </template>
 
 <style lang ="scss" scoped>
