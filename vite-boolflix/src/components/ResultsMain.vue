@@ -19,11 +19,11 @@ voteInFive(vote){
 
 <template>
 <div class="container mt-4" v-for="movie in movies" :key="movie.id">
- <h1 class="text-success"> {{ movie.title }}</h1>
- <h2>{{ movie.original_title }}</h2>
- <h3>{{ movie.original_language }}</h3>
- <h4>{{ voteInFive(movie.vote_average) }}</h4>
- <img class="d-block w-50":src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" alt="#">
+ <p>Titolo originale: <h4 class="text-success d-inline"> {{ movie.original_title }}</h4></p>
+ <p>Traduzione titolo:<h5>{{ movie.title }}</h5></p>
+ <p>Lingua originale:<h5>{{ movie.original_language }}</h5></p>
+ <p>Valutazione:<h6>{{ voteInFive(movie.vote_average) }}</h6></p>
+ <img class="d-block":src="'https://image.tmdb.org/t/p/w342/' + movie.poster_path" alt="#">
 
 </div>
   
