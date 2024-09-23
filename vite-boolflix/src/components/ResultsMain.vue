@@ -23,6 +23,7 @@ voteInFive(vote){
  <h2>{{ movie.original_title }}</h2>
  <h3>{{ movie.original_language }}</h3>
  <h4>{{ voteInFive(movie.vote_average) }}</h4>
+ <img class="d-block w-50":src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" alt="#">
 
 </div>
   
