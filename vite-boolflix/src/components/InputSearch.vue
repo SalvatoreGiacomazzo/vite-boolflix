@@ -20,7 +20,7 @@ export default {
 <template>
 <div class="container mt-4">
  <div class="input-group">
-  <input v-model="resultsQuery" type="search" class="form-control rounded" placeholder="Search a movie..."  />
+  <input v-model="resultsQuery" v-on:keyup.enter="searchRequest"  type="search" class="form-control rounded" placeholder="Search a movie..."  />
   <button @click="searchRequest" type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
  </div>
 </div>

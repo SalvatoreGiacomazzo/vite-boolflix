@@ -21,6 +21,7 @@ movies:[] //Array che verrà riempito con chiamata API
         //chiamata con Axios
         axios.get(apiUrl).then((response) => {
           this.movies = response.data.results
+          console.log(this.movies)
         }).catch((error) => {
          console.log('Errore')
         }) 
