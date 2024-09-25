@@ -22,7 +22,7 @@ voteInFive(vote){
 <div class="container mt-4">
  <div class="row">
   <div class="col-md-3 mb-4" v-for="media in medias" :key="media.id">
-    <div class="card" style="width: 18rem;">
+    <div class="card movie-card" style="width: 18rem;">
         <img class="card-img-top d-block" :src="'https://image.tmdb.org/t/p/w342/' + media.poster_path" alt="Card image cap">
         <div class="card-body">
             <p>Titolo originale: <span class="text-success">{{ media.original_title }}</span></p>
@@ -38,7 +38,36 @@ voteInFive(vote){
 </template>
 
 <style lang="scss">
-@import "bootstrap/scss/bootstrap"
+@import "bootstrap/scss/bootstrap";
+
+.movie-card .card-body{
+    opacity:0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease-in-out;
+  background-color: white;
+
+}
+
+.movie-card:hover .card-body {
+  opacity: 1;
+}
 
 
+.movie-card{
+    overflow:hidden;
+    position: relative;
+}
+
+.movie-card:hover img{
+opacity: 0;
+transition: opacity 0.2s ease-in-out
+}
 </style>
