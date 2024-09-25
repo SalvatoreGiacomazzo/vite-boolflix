@@ -10,7 +10,7 @@ export default {
   }, 
   data() {
         return {
-movies:[] //Array che verrà riempito con chiamata API
+medias:[] //Array che verrà riempito con chiamata API
         }
     },
     methods:{
@@ -27,8 +27,8 @@ movies:[] //Array che verrà riempito con chiamata API
           const tvFound = response.data.results
 
 
-          this.movies = [...moviesFound, ...tvFound];   
-          console.log(this.movies);
+          this.medias = [...moviesFound, ...tvFound];   
+          console.log(this.medias);
 
         })
         
@@ -54,7 +54,7 @@ movies:[] //Array che verrà riempito con chiamata API
 <template>
 <InputSearch @search="searchRequest"/>
 
-<ResultsMain :movies="movies"/>
+<ResultsMain :medias="medias"/>
 
 
 
@@ -62,7 +62,6 @@ movies:[] //Array che verrà riempito con chiamata API
 </template>
 
 <style lang ="scss" scoped>
-
 @import "bootstrap/scss/bootstrap"
 
 
